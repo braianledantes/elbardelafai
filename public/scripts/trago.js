@@ -14,7 +14,7 @@ function getParams() {
     }
 }
 
-fetch(`https://elbardelafai-dev.fl0.io//api/drinks/${idDrink}`)
+fetch(`https://elbardelafai-dev.fl0.io/api/drinks/${idDrink}`)
     .then(res => res.json())
     .then(drink => renderDrink(drink))
 
