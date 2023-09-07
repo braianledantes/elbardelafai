@@ -32,7 +32,7 @@ btnPrev.addEventListener('click', () => {
 function searchIngredient(query) {
     removeIngredientesItems();
 
-    fetch(`http://localhost:8080/api/ingredients?search=${query}&page=${page}&pageSize=${pageSize}`)
+    fetch(`https://elbardelafai-dev.fl0.io/api/ingredients?search=${query}&page=${page}&pageSize=${pageSize}`)
         .then(response => response.json())
         .then(json => initializeIngredientes(json))
 

@@ -14,7 +14,7 @@ function getParams() {
     }
 }
 
-fetch(`http://localhost:8080/api/drinks/${idDrink}`)
+fetch(`https://elbardelafai-dev.fl0.io//api/drinks/${idDrink}`)
     .then(res => res.json())
     .then(drink => renderDrink(drink))
 
@@ -48,8 +48,7 @@ async function renderDrink(drink) {
 
     drink.ingredients.forEach(async ingredientName => {
         try {
-            console.log(`http://localhost:8080/api/ingredients/${ingredientName.replace(" ", "%20")}`);
-            const res = await fetch(`http://localhost:8080/api/ingredients/${ingredientName.replace(" ", "%20")}`)
+            const res = await fetch(`https://elbardelafai-dev.fl0.io//api/ingredients/${ingredientName.replace(" ", "%20")}`)
             const ingredient = await res.json()
             if (ingredient) {
                 const articleIngredient = document.createElement("article");
