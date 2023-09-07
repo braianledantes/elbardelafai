@@ -48,7 +48,7 @@ async function renderDrink(drink) {
 
     drink.ingredients.forEach(async ingredientName => {
         try {
-            const res = await fetch(`https://elbardelafai-dev.fl0.io//api/ingredients/${ingredientName.replace(" ", "%20")}`)
+            const res = await fetch(`https://elbardelafai-dev.fl0.io/api/ingredients/${ingredientName.replace(" ", "%20")}`)
             const ingredient = await res.json()
             if (ingredient) {
                 const articleIngredient = document.createElement("article");
