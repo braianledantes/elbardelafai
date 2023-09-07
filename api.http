@@ -1,0 +1,34 @@
+### Recuperar todos los tragos
+GET http://localhost:8080/api/drinks
+
+### Recuperar tragos con paginación
+GET http://localhost:8080/api/drinks?page=6&pageSize=16
+
+### Recuperar todos los tragos más populares
+GET http://localhost:8080/api/drinks/concurrents
+
+### Buscar un trago por nombre
+GET http://localhost:8080/api/drinks?search=ABC
+
+### Recuperar un trago por id
+GET http://localhost:8080/api/drinks/17222
+
+### Actualizar un trago
+PATCH http://localhost:8080/api/drinks/17222
+Content-Type: application/json
+
+{
+    "strDrink": "Margarita"
+}
+
+### Eliminar un trago por id
+DELETE http://localhost:8080/api/drinks/13501
+
+### Recuperar todos los ingredientes
+GET http://localhost:8080/api/ingredients
+
+### Recuperar un ingrediente por nombre
+GET http://localhost:8080/api/ingredients/Applejack
+
+### Buscar ingredientes por nombre
+GET http://localhost:8080/api/ingredients?search=gin
