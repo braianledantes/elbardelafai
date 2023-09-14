@@ -1,4 +1,4 @@
-fetch('https://elbardelafai-dev.fl0.io/api/drinks/concurrents')
+fetch('/api/drinks/concurrents')
     .then(response => response.json())
     .then(json => initializeTragos(json))
 

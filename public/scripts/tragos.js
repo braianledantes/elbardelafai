@@ -5,7 +5,7 @@ const btnNext = document.getElementById('btnNext');
 const btnPrev = document.getElementById('btnPrev');
 
 let page = 1;
-let pageSize = 16;
+let pageSize = 12;
 let maxPages = Number.MAX_VALUE;
 
 buscarTrago(inputSearch.value);
@@ -32,7 +32,7 @@ btnPrev.addEventListener('click', () => {
 function buscarTrago(query) {
     removeTragosItems();
 
-    fetch(`https://elbardelafai-dev.fl0.io/api/drinks?search=${query}&page=${page}&pageSize=${pageSize}`)
+    fetch(`/api/drinks?search=${query}&page=${page}&pageSize=${pageSize}`)
         .then(response => response.json())
         .then(json => initializeTragos(json))
 
