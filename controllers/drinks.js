@@ -32,7 +32,6 @@ export class DrinkController {
     }
 
     static async create(req, res) {
-        console.log("Controler", "create drink", req.body);
         const result = validateDrink(req.body);
 
         if (!result.success) {
