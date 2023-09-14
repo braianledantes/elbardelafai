@@ -8,9 +8,15 @@
     <meta name="description" content="Portal de tragos del Barcito de la FAI">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Titulo -->
-    <title>El Bar de la FAI</title>
+    <title>Tragos | El Bar de la FAI</title>
     <!-- Estilos -->
     <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        :root {
+            --primary-color: #b1ae00;
+            --secondary-color: #686600;
+        }
+    </style>
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <!-- Fonts -->
@@ -18,8 +24,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;700&display=swap"
         rel="stylesheet">
-
-    <script src="./scripts/index.js" defer></script>
 </head>
 
 <body>
@@ -30,7 +34,7 @@
         </a>
         <nav class="navbar">
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./tragos.html">Tragos</a></li>
                 <li><a href="./ingredientes.html">Ingredientes</a></li>
                 <li><a href="./acercade.html">Acerca de</a></li>
@@ -38,33 +42,27 @@
         </nav>
     </header>
     <main>
-        <section class="presentacion">
-            <h1>El Bar de la FAI</h1>
-        </section>
-
         <section class="tragos-populares">
-            <h2>Tragos Concurrentes</h2>
-            <div class="lista-tragos" id="lista-tragos">
-                <!--                
-                <article class="trago">
-                    <img class="trago__img" src="./assets/images/drinks/mojito.jpg" alt="Trago 1">
-                    <p class="trago__descripcion">Mojito</p>
-                </article>
-                 -->
+            <h2>Tragos</h2>
+            <div class="buscador">
+                <input type="text" id="inputNombreTrago" placeholder="Ej: Margarita">
+                <button type="button" id="btnBuscar">Buscar</button>
+                <a href="./creartrago.html"><button type="button" style="background-color: green;">Crear Trago</button></a>
             </div>
-        </section>
-
-        <section class="ubicacion">
-            <h2>Dónde encontrarnos</h2>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6206.595847152138!2d-68.06095258049488!3d-38.94002174143594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33ddad7d7867%3A0x8e9d0c6aed561b29!2sBuenos%20Aires%201400%2C%20Q8300%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1691791139170!5m2!1ses-419!2sar"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="lista-tragos" id="lista-tragos">
+            </div>
+            <div class="navigation_page">
+                <button type="button" id="btnPrev">< Anterior</button>
+                        <span class="number_page" id="currentPage">1</span>
+                        <button type="button" id="btnNext">Siguiente ></button>
+            </div>
         </section>
     </main>
     <footer>
         <p>Braian Ledantes | TPO 3 de Laboratorio de Programación | UNCO &#169; 2020</p>
     </footer>
+
+    <script src="./scripts/tragos.js"></script>
 </body>
 
 </html>

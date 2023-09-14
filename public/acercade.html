@@ -8,9 +8,15 @@
     <meta name="description" content="Portal de tragos del Barcito de la FAI">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Titulo -->
-    <title>El Bar de la FAI</title>
+    <title>Acerca de | El Bar de la FAI</title>
     <!-- Estilos -->
     <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        :root {
+            --primary-color: #702cf5;
+            --secondary-color: #8e60eb;
+        }
+    </style>
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <!-- Fonts -->
@@ -18,8 +24,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;700&display=swap"
         rel="stylesheet">
-
-    <script src="./scripts/index.js" defer></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -30,7 +36,7 @@
         </a>
         <nav class="navbar">
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./tragos.html">Tragos</a></li>
                 <li><a href="./ingredientes.html">Ingredientes</a></li>
                 <li><a href="./acercade.html">Acerca de</a></li>
@@ -38,28 +44,18 @@
         </nav>
     </header>
     <main>
-        <section class="presentacion">
-            <h1>El Bar de la FAI</h1>
-        </section>
-
-        <section class="tragos-populares">
-            <h2>Tragos Concurrentes</h2>
-            <div class="lista-tragos" id="lista-tragos">
-                <!--                
-                <article class="trago">
-                    <img class="trago__img" src="./assets/images/drinks/mojito.jpg" alt="Trago 1">
-                    <p class="trago__descripcion">Mojito</p>
-                </article>
-                 -->
+        <section class="sobre-el-tp">
+            <div class="descripcion">
+                <h1>Laboratorio de Programación</h1>
+                <h5>Trabajo Práctico Obligatirio N°2</h5>
+                <p><strong>Consigna:</strong> Realizar un sitio Web estático sobre algún dominio.</p>
+                <P>Braian Ledantes</P>
+                <P>FAI-1686</P>
+                <p><a href="https://github.com/braianledantes" target="_blank" rel="noopener noreferrer">Repositorio en
+                        GitHub <i class="bi bi-github"></i></a></p>
             </div>
-        </section>
+            <img src="./assets/images/foto-de-braian.jpg" alt="Foto de Braian Ledantes en un bar">
 
-        <section class="ubicacion">
-            <h2>Dónde encontrarnos</h2>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6206.595847152138!2d-68.06095258049488!3d-38.94002174143594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33ddad7d7867%3A0x8e9d0c6aed561b29!2sBuenos%20Aires%201400%2C%20Q8300%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1691791139170!5m2!1ses-419!2sar"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
     <footer>
