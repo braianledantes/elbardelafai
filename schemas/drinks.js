@@ -18,7 +18,7 @@ export function validatePartialDrink(input) {
 const drinkSearchSchema = z.object({
     search: z.string(),
     page: z.number().positive(),
-    pageSize: z.number().positive()
+    pageSize: z.number().positive().max(32)
 })
 
 export function validateDrinkSearch(input) {
