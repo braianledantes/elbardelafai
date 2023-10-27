@@ -4,21 +4,6 @@ import { randomUUID } from 'node:crypto';
 
 // TODO convertir json con los datos necesarios
 const drinks = readJSON('./data/drinks.json');
-sortDrinks();
-
-function sortDrinks() {
-    drinks.sort((a, b) => {
-        const nameA = a.name.toUpperCase();
-        const nameB = b.name.toUpperCase();
-        if (nameA < nameB) {
-          return -1;
-        }
-        if (nameA > nameB) {
-          return 1;
-        }
-        return 0;
-      });
-}
 
 export class DrinkModel {
     static async getAll({ search = "", page = 1, pageSize = 12 }) {
@@ -73,8 +58,6 @@ export class DrinkModel {
 
         drinks.push(newDrink);
 
-        sortDrinks();
-
         return newDrink;
     }
 
@@ -96,8 +79,6 @@ export class DrinkModel {
             ...drinks[drinkIndex],
             ...input
         }
-
-        sortDrinks();
 
         return drinks[drinkIndex];
     }

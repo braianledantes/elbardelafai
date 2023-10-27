@@ -25,4 +25,11 @@ export class IngredientController {
 
         res.status(404).json(({ message: 'Drink not fount' }));
     }
+
+    static async getRandom(req, res) {
+        const ingredient = await IngredientModel.getRandom();
+        if (ingredient) return res.json(ingredient);
+
+        res.status(404).json(({ message: 'Drink not fount' }));
+    }
 }
