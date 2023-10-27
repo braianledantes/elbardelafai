@@ -1,8 +1,6 @@
-import { number } from 'zod';
 import { readJSON } from '../utils.js';
 import { randomUUID } from 'node:crypto';
 
-// TODO convertir json con los datos necesarios
 const drinks = readJSON('./data/drinks.json');
 
 export class DrinkModel {
